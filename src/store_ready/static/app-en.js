@@ -428,7 +428,7 @@ const applyFocusPreset = (storeType, reset = true) => {
 const updateGuidedFields = () => {
   const form = $("project-form").elements;
   const customStoreType = form.store_type.value === "other";
-  const customLocation = form.location_city.value === "other" || form.location_area.value === "other";
+  const customLocation = form.location_area.value === "other";
   const customBudget = form.budget_range.value === "custom";
   $("store-type-other-field").hidden = !customStoreType;
   $("location-other-field").hidden = !customLocation;
@@ -446,14 +446,12 @@ const formPayload = () => {
   const cityChoice = String(form.get("location_city") || "");
   const areaChoice = String(form.get("location_area") || "");
   const customLocation = String(form.get("location_other") || "").trim();
-  if ((cityChoice === "other" || areaChoice === "other") && !customLocation) {
-    throw new Error("Enter the other location");
+  if (areaChoice === "other" && !customLocation) {
+    throw new Error("Enter the area details");
   }
-  const locationParts = [];
-  if (cityChoice === "other") locationParts.push(customLocation);
-  else locationParts.push(cityChoice);
+  const locationParts = [cityChoice];
   if (areaChoice === "other") {
-    if (cityChoice !== "other") locationParts.push(customLocation);
+    locationParts.push(customLocation);
   } else locationParts.push(areaChoice);
   const budgetChoice = String(form.get("budget_range") || "");
   const budget = Number(budgetChoice === "custom" ? form.get("budget_custom") : budgetChoice);

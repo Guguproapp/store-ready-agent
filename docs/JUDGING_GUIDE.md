@@ -1,10 +1,10 @@
 # Judge Testing Guide
 
-StoreReady Agent is an end-to-end pre-opening readiness workspace for the Professional Agents track.
+StoreReady Agent is a Taiwan-first, end-to-end pre-opening readiness workspace for the Professional Agents track. Traditional Chinese and English are two interfaces for the same Taiwan opening workflow; English does not switch the product to another country's rules.
 
 ## Fast path — approximately two minutes
 
-1. Open the demo URL supplied in the Devpost submission and select **English** if needed.
+1. Open [the Traditional Chinese demo](https://store-ready-agent.onrender.com/) or [the English interface](https://store-ready-agent.onrender.com/en).
 2. Confirm no login or personal data is requested.
 3. Select **Load example** and review the guided dropdowns, document statuses, and task checklist.
 4. Select **Create and analyze plan**.
@@ -45,7 +45,9 @@ Open `http://127.0.0.1:8000`, select **Load example**, and run the deterministic
 
 ## Safety notes
 
+- The current product scope is physical-store opening in Taiwan. It is not a universal regulatory engine.
 - This is a hackathon DEMO, not legal, financial, permit, or government-submission advice.
+- City and county selection does not mean every current local requirement is encoded; confirm requirements with the competent local authority and qualified professionals in Taiwan.
 - It does not send messages, purchase services, sign contracts, submit permits, or approve decisions automatically.
 - The public demo stores only fictional test data and expires DEMO records.
 - Opening-day operations and post-opening analytics are roadmap ideas, not claimed submission features.

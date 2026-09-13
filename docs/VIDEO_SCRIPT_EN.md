@@ -8,7 +8,7 @@ Target runtime: 4 minutes 35 seconds. Hard limit: 5 minutes.
 
 **Narration:**
 
-Opening a physical store is a dependency problem disguised as a checklist. Documents, equipment, contractors, staff training, and budget all compete against one hard opening date. Store owners often know what needs to happen, but not what blocks what, what is already late, or which decision still requires them.
+Opening a physical store in Taiwan is a dependency problem disguised as a checklist. Documents, equipment, contractors, staff training, and budget all compete against one hard opening date. Store owners often know what needs to happen, but not what blocks what, what is already late, or which decision still requires them.
 
 ## 0:25–0:50 — The product
 
@@ -16,7 +16,7 @@ Opening a physical store is a dependency problem disguised as a checklist. Docum
 
 **Narration:**
 
-StoreReady Agent is an end-to-end pre-opening readiness workspace built for small-business owners. It turns one store brief into a traceable launch plan, deterministic risk calculations, an independent AI review, and explicit human decisions. This demo uses fictional data and is not a production permit or purchasing service.
+StoreReady Agent is a Taiwan-first pre-opening readiness workspace built for small-business owners. Its Traditional Chinese and English interfaces use the same Taiwan-focused planning logic. It turns one store brief into a traceable launch plan, deterministic risk calculations, an independent AI review, and explicit human decisions. This demo uses fictional data and is not legal advice, regulatory approval, a permit service, or a purchasing service.
 
 ## 0:50–1:25 — Eight-part brief
 
@@ -24,7 +24,7 @@ StoreReady Agent is an end-to-end pre-opening readiness workspace built for smal
 
 **Narration:**
 
-The owner provides the eight parts of the opening brief through guided choices instead of composing long text. For this fictional coffee shop, the lease is complete, two documents are missing, several tasks remain, and the detailed spend leaves a sixty-five-thousand New Taiwan dollar buffer. The system keeps missing information unknown instead of inventing values.
+The owner provides the eight parts of the opening brief through guided choices instead of composing long text. The location field contains Taiwan's twenty-two cities and counties. For this fictional coffee shop, the lease is complete, two documents are missing, several tasks remain, and the detailed spend leaves a sixty-five-thousand New Taiwan dollar buffer. The system keeps missing information unknown instead of inventing values.
 
 ## 1:25–2:05 — Launch Manager and deterministic tools
 

@@ -77,6 +77,19 @@ class PublicSubmissionTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "local path found"):
                 _scan(destination)
 
+    def test_public_materials_define_taiwan_first_scope_and_current_demo_urls(self) -> None:
+        readme = (self.root / "README.md").read_text(encoding="utf-8")
+        judging_guide = (self.root / "docs" / "JUDGING_GUIDE.md").read_text(encoding="utf-8")
+        devpost = (self.root / "docs" / "DEVPOST_DRAFT.md").read_text(encoding="utf-8")
+
+        self.assertIn("Taiwan-first", readme)
+        self.assertIn("https://store-ready-agent.onrender.com/", readme)
+        self.assertIn("https://store-ready-agent.onrender.com/en", readme)
+        self.assertNotIn("trycloudflare.com", readme)
+        self.assertIn("opening in Taiwan", judging_guide)
+        self.assertIn("Taiwan-first", devpost)
+        self.assertIn("not a universal regulatory engine", devpost)
+
 
 if __name__ == "__main__":
     unittest.main()

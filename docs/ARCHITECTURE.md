@@ -4,6 +4,8 @@
 
 The diagram asset is a standalone SVG suitable for the public repository, Devpost images, and the demonstration video.
 
+The current product scope is physical-store opening in Taiwan. Traditional Chinese and English are presentation layers over the same Taiwan-focused workflow. Supporting another country requires a separately verified rules module and is outside this release.
+
 ```text
 Responsive Browser UI (HTML / CSS / JavaScript)
     |

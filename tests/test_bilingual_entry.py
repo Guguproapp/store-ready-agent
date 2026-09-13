@@ -9,6 +9,72 @@ from store_ready.web_app import ENGLISH_HTML, ENGLISH_JAVASCRIPT, HTML, JAVASCRI
 
 
 class BilingualEntryTests(unittest.TestCase):
+    def test_both_entries_are_explicitly_taiwan_first(self) -> None:
+        self.assertIn("台灣實體店開幕準備", HTML)
+        self.assertIn("中文版與英文版使用同一套台灣開店規劃邏輯", HTML)
+        self.assertIn("台灣實體店開幕規劃", HTML)
+        self.assertIn("TAIWAN PHYSICAL-STORE LAUNCH READINESS", ENGLISH_HTML)
+        self.assertIn("physical-store opening in Taiwan", ENGLISH_HTML)
+        self.assertIn("same Taiwan-focused planning logic", ENGLISH_HTML)
+        self.assertIn("planning in Taiwan", ENGLISH_HTML)
+
+        self.assertNotIn('value="other">其他地點', HTML)
+        self.assertNotIn('value="other">Other location', ENGLISH_HTML)
+
+    def test_both_entries_offer_the_same_22_taiwan_jurisdictions(self) -> None:
+        chinese_places = (
+            "基隆市",
+            "台北市",
+            "新北市",
+            "桃園市",
+            "新竹市",
+            "新竹縣",
+            "苗栗縣",
+            "台中市",
+            "彰化縣",
+            "南投縣",
+            "雲林縣",
+            "嘉義市",
+            "嘉義縣",
+            "台南市",
+            "高雄市",
+            "屏東縣",
+            "宜蘭縣",
+            "花蓮縣",
+            "台東縣",
+            "澎湖縣",
+            "金門縣",
+            "連江縣",
+        )
+        english_places = (
+            "Keelung City",
+            "Taipei City",
+            "New Taipei City",
+            "Taoyuan City",
+            "Hsinchu City",
+            "Hsinchu County",
+            "Miaoli County",
+            "Taichung City",
+            "Changhua County",
+            "Nantou County",
+            "Yunlin County",
+            "Chiayi City",
+            "Chiayi County",
+            "Tainan City",
+            "Kaohsiung City",
+            "Pingtung County",
+            "Yilan County",
+            "Hualien County",
+            "Taitung County",
+            "Penghu County",
+            "Kinmen County",
+            "Lienchiang County",
+        )
+        for name in chinese_places:
+            self.assertIn(f"<option>{name}</option>", HTML)
+        for name in english_places:
+            self.assertIn(f"<option>{name}</option>", ENGLISH_HTML)
+
     def test_english_sources_are_complete_and_language_pure(self) -> None:
         self.assertIn('<html lang="en">', ENGLISH_HTML)
         self.assertIn('<meta name="robots" content="noindex,nofollow">', ENGLISH_HTML)

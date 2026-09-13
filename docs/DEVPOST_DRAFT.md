@@ -4,17 +4,17 @@ Track: **Professional Agents**
 
 ## One-line summary
 
-StoreReady Agent turns a physical store's opening brief into a traceable launch plan with deterministic risk calculations and an independent readiness review.
+StoreReady Agent turns a physical store's Taiwan opening brief into a traceable launch plan with deterministic risk calculations and an independent readiness review.
 
 ## Inspiration and problem
 
 Physical-store owners coordinate permits, contractors, equipment, staff training, budgets, and a hard opening date. These are dependent activities, but the information is usually scattered across messages, notes, and spreadsheets. A normal chatbot can suggest a checklist, but it does not reliably calculate the schedule, prove the critical path, or protect the owner's final decision.
 
-StoreReady Agent treats pre-opening readiness as one complete professional workflow rather than an open-ended conversation.
+StoreReady Agent treats pre-opening readiness as one complete professional workflow rather than an open-ended conversation. It is Taiwan-first: Traditional Chinese and English are two interfaces for the same Taiwan opening workflow, not two country rule sets.
 
 ## What it does
 
-The demo accepts all eight brief fields: fictional store type, location, budget, opening date, acquired and missing documents, completed and pending work. Launch Manager organizes the brief and requests a Readiness Reviewer check. Deterministic Python tools calculate workdays, dependencies, critical path, document gaps, budget risk, training gaps and readiness score. The responsive workspace then exposes risks, Agent differences, human approvals, an Audit Log, and downloadable or print-ready reports.
+The demo accepts all eight brief fields: fictional store type, one of Taiwan's twenty-two cities or counties, area type, budget, opening date, acquired and missing documents, completed and pending work. Launch Manager organizes the brief and requests a Readiness Reviewer check. Deterministic Python tools calculate workdays, dependencies, critical path, document gaps, budget risk, training gaps and readiness score. The responsive workspace then exposes risks, Agent differences, human approvals, an Audit Log, and downloadable or print-ready reports.
 
 Its signature feature is the **Opening Rescue Simulator**. When a task slips or an unexpected cost appears, the owner can model that shock without changing the approved baseline. The system computes the task's last safe date and available slack, then returns exactly three comparable strategies—protect the opening date, protect the budget, or minimize combined risk. Each card shows the resulting date, delay, recovery work, budget outcome, feasibility, and blockers. The two Agents independently verify immutable source, shock, and result hashes before a human can record one strategy.
 
@@ -62,7 +62,7 @@ On 2026-09-12, the real integration ran with Strands Agents SDK 1.55.0 and Amazo
 
 The bilingual judge surface is a public-safe DEMO. Its public Live endpoint is disabled by default to prevent unmetered AWS use; the saved Live evidence and local integration test demonstrate the Bedrock path without exposing credentials or an unlimited paid endpoint.
 
-The verified bilingual submission package passed 75 automated tests, Ruff, formatting, Mypy, Python compilation, JavaScript syntax, wheel packaging, dependency checks, and secret scans. The responsive UI passed exact Browser QA at 1440×900, 768×1024, and 390×844 without page-level horizontal overflow; the English workflow and Safari loading checks also passed.
+The verified bilingual submission package passed 78 automated tests, Ruff, formatting, Mypy, Python compilation, JavaScript syntax, wheel packaging, dependency checks, and secret scans. The responsive UI passed exact Browser QA at 1440×900, 768×1024, and 390×844 without page-level horizontal overflow; the English workflow and Safari loading checks also passed.
 
 ## Challenges
 
@@ -88,7 +88,7 @@ Reliable professional Agents need more than prompts. They need deterministic sou
 
 ## What's next
 
-After the hackathon, the same safety architecture could support configurable local document requirements, holiday calendars, richer project templates, and—only as separately tested modules—opening-day operations and post-opening improvement tracking. The current submission does not claim those future features.
+After the hackathon, the same safety architecture could support verified Taiwan local-requirement updates, holiday calendars, richer project templates, and—only as separately tested modules—other-country rule packs, opening-day operations, and post-opening improvement tracking. The current submission is not a universal regulatory engine and does not claim those future features.
 
 ## New work and disclosure
 

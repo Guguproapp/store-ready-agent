@@ -317,7 +317,7 @@ const applyFocusPreset = (storeType, reset = true) => {
 const updateGuidedFields = () => {
   const form = $("project-form").elements;
   const customStoreType = form.store_type.value === "other";
-  const customLocation = form.location_city.value === "other" || form.location_area.value === "other";
+  const customLocation = form.location_area.value === "other";
   const customBudget = form.budget_range.value === "custom";
   $("store-type-other-field").hidden = !customStoreType;
   $("location-other-field").hidden = !customLocation;
@@ -336,12 +336,10 @@ const formPayload = () => {
   const cityChoice = String(form.get("location_city") || "");
   const areaChoice = String(form.get("location_area") || "");
   const customLocation = String(form.get("location_other") || "").trim();
-  if ((cityChoice === "other" || areaChoice === "other") && !customLocation) throw new Error("請填寫其他地點");
-  const locationParts = [];
-  if (cityChoice === "other") locationParts.push(customLocation);
-  else locationParts.push(cityChoice);
+  if (areaChoice === "other" && !customLocation) throw new Error("請填寫區域補充");
+  const locationParts = [cityChoice];
   if (areaChoice === "other") {
-    if (cityChoice !== "other") locationParts.push(customLocation);
+    locationParts.push(customLocation);
   } else locationParts.push(areaChoice);
 
   const budgetChoice = String(form.get("budget_range") || "");

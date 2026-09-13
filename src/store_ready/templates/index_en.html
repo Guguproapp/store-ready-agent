@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="StoreReady Agent | Launch readiness workspace for physical stores">
-  <title>StoreReady Agent | Launch Readiness Workspace</title>
+  <meta name="description" content="StoreReady Agent | Taiwan physical-store launch readiness workspace">
+  <title>StoreReady Agent | Taiwan Launch Readiness Workspace</title>
   <link rel="alternate" hreflang="zh-Hant" href="/">
   <link rel="stylesheet" href="/assets/app.css?v=13">
   <script src="/assets/app-en.js?v=15" defer></script>
@@ -15,14 +15,14 @@
   <header class="topbar">
     <a class="brand" href="#top" aria-label="StoreReady Agent home">
       <span class="brand-mark" aria-hidden="true">SR</span>
-      <span><strong>StoreReady Agent</strong><small>Launch readiness workspace</small></span>
+      <span><strong>StoreReady Agent</strong><small>Taiwan launch readiness workspace</small></span>
     </a>
     <nav aria-label="Primary navigation">
       <a href="#top">Home</a><a href="#planner">Build plan</a><a href="#dashboard">Readiness</a><a href="#rescue">Launch rescue</a><a href="#approvals">Your approval</a>
     </nav>
     <div class="top-actions">
       <a class="button button-ghost" href="/" hreflang="zh-Hant">Traditional Chinese</a>
-      <span class="environment-badge">Sample data</span>
+      <span class="environment-badge">Taiwan</span>
       <span id="service-state" class="service-state" role="status">Checking service</span>
     </div>
   </header>
@@ -30,37 +30,37 @@
   <main id="workspace" class="app-shell">
     <section id="top" class="hero" aria-labelledby="page-title">
       <div>
-        <p class="eyebrow">Plan, review, and keep the final decision human</p>
-        <h1 id="page-title">See every pre-opening task, risk, and deadline<br>in one clear workspace.</h1>
-        <p class="hero-copy">Find the essential documents, site, equipment, and staffing gaps for your store type. Calculate each task's last safe completion date, then compare three recovery options when work slips.</p>
+        <p class="eyebrow">TAIWAN PHYSICAL-STORE LAUNCH READINESS</p>
+        <h1 id="page-title">Plan a physical-store opening in Taiwan<br>with clear risks and deadlines.</h1>
+        <p class="hero-copy">Use your store type and Taiwan location to focus on essential documents, site, equipment, and staffing. Calculate each task's last safe completion date, then compare three recovery options when work slips.</p>
         <div class="hero-actions"><a class="button button-primary" href="#planner">Check launch risk</a><a class="button button-ghost" href="#index-overview">See three core capabilities</a></div>
       </div>
       <div class="hero-assurance" aria-label="Product safety boundary"><span class="assurance-icon" aria-hidden="true">✓</span><div><strong>You make the final decision</strong><p>Agents never file applications, pay, sign contracts, or approve risks for you.</p></div></div>
     </section>
 
     <section id="index-overview" class="index-overview" aria-labelledby="index-title">
-      <div class="index-heading"><p class="section-kicker">PRODUCT OVERVIEW</p><h2 id="index-title">Control the three launch issues most likely to derail opening day</h2><p>Instead of flooding you with generic advice, this workspace concentrates the decisions that directly affect your opening date.</p></div>
+      <div class="index-heading"><p class="section-kicker">PRODUCT OVERVIEW</p><h2 id="index-title">Control the three launch issues most likely to derail opening day</h2><p>Instead of flooding you with generic advice, this workspace focuses on decisions that affect a physical-store opening in Taiwan.</p></div>
       <div class="index-card-grid">
         <article class="index-card"><span>01</span><h3>Last safe completion dates</h3><p>Calculate when each task must finish from workday durations and dependencies.</p></article>
         <article class="index-card"><span>02</span><h3>Store-specific gaps</h3><p>Show only the essential documents, site, equipment, and people items for the selected store type.</p></article>
         <article class="index-card"><span>03</span><h3>Launch rescue choices</h3><p>Compare date-first, budget-first, and lowest-risk recovery options, then leave the choice to you.</p></article>
       </div>
-      <p class="scope-strip"><strong>Product scope:</strong> pre-opening planning only. No post-opening operations, payment, filing, or automatic purchasing.</p>
+      <p class="scope-strip"><strong>Product scope:</strong> pre-opening planning for physical stores in Taiwan only. No post-opening operations, payment, filing, or automatic purchasing. The English interface uses the same Taiwan-focused planning logic as the Traditional Chinese interface.</p>
     </section>
 
     <section class="workspace-grid">
       <aside id="planner" class="panel planner-panel" aria-labelledby="planner-title">
         <div class="panel-heading"><div><p class="section-kicker">STORE INPUTS</p><h2 id="planner-title">Build a launch plan</h2></div><button id="sample-fill" class="button button-ghost" type="button">Load sample</button></div>
-        <p class="helper">Choose store details and document status, then check the work already completed.</p>
+        <p class="helper">Choose a Taiwan store location and store details, then mark document status and completed work.</p>
         <form id="project-form">
           <fieldset class="guided-step">
             <legend><span>1</span>Choose store conditions</legend>
             <div class="field-grid">
               <label class="field"><span>Store type <b aria-hidden="true">*</b></span><select id="store-type" name="store_type" required><option value="">Choose a store type</option><option>Street coffee shop</option><option>Beverage shop</option><option>Restaurant or food stall</option><option>Bakery or dessert shop</option><option>Food retail store</option><option>General retail store</option><option>Beauty, hair, or nail studio</option><option>Pet service store</option><option>Fitness or sports studio</option><option>Education or arts classroom</option><option>Lifestyle service store</option><option>Food cart or pop-up store</option><option value="other">Other store type</option></select></label>
               <label id="store-type-other-field" class="field guided-other" hidden><span>Other store type</span><input name="store_type_other" maxlength="80" placeholder="Example: bicycle repair shop"></label>
-              <label class="field"><span>City or county <b aria-hidden="true">*</b></span><select id="location-city" name="location_city" required><option value="">Choose a city or county</option><optgroup label="North"><option>Keelung City</option><option>Taipei City</option><option>New Taipei City</option><option>Taoyuan City</option><option>Hsinchu City</option><option>Hsinchu County</option><option>Yilan County</option></optgroup><optgroup label="Central"><option>Miaoli County</option><option>Taichung City</option><option>Changhua County</option><option>Nantou County</option><option>Yunlin County</option></optgroup><optgroup label="South"><option>Chiayi City</option><option>Chiayi County</option><option>Tainan City</option><option>Kaohsiung City</option><option>Pingtung County</option></optgroup><optgroup label="East and islands"><option>Hualien County</option><option>Taitung County</option><option>Penghu County</option><option>Kinmen County</option><option>Lienchiang County</option></optgroup><option value="other">Other location</option></select></label>
+              <label class="field"><span>Taiwan city or county <b aria-hidden="true">*</b></span><select id="location-city" name="location_city" required><option value="">Choose a Taiwan city or county</option><optgroup label="North"><option>Keelung City</option><option>Taipei City</option><option>New Taipei City</option><option>Taoyuan City</option><option>Hsinchu City</option><option>Hsinchu County</option><option>Yilan County</option></optgroup><optgroup label="Central"><option>Miaoli County</option><option>Taichung City</option><option>Changhua County</option><option>Nantou County</option><option>Yunlin County</option></optgroup><optgroup label="South"><option>Chiayi City</option><option>Chiayi County</option><option>Tainan City</option><option>Kaohsiung City</option><option>Pingtung County</option></optgroup><optgroup label="East and islands"><option>Hualien County</option><option>Taitung County</option><option>Penghu County</option><option>Kinmen County</option><option>Lienchiang County</option></optgroup></select></label>
               <label class="field"><span>Area type <b aria-hidden="true">*</b></span><select id="location-area" name="location_area" required><option value="">Choose an area type</option><option>Residential commercial area</option><option>Office commercial area</option><option>Transit area</option><option>Tourist commercial area</option><option>Neighborhood storefront</option><option value="other">Other area</option></select></label>
-              <label id="location-other-field" class="field guided-other" hidden><span>Other location</span><input name="location_other" maxlength="160" placeholder="Example: East District, Hsinchu City"></label>
+              <label id="location-other-field" class="field guided-other" hidden><span>Area details</span><input name="location_other" maxlength="160" placeholder="Example: East District residential area; do not enter a full address"></label>
               <label class="field"><span>Total budget in TWD <b aria-hidden="true">*</b></span><select id="budget-range" name="budget_range" required><option value="">Choose a budget</option><option value="300000">TWD 300,000</option><option value="500000">TWD 500,000</option><option value="800000">TWD 800,000</option><option value="1200000">TWD 1,200,000</option><option value="2000000">TWD 2,000,000</option><option value="3000000">TWD 3,000,000</option><option value="5000000">TWD 5,000,000</option><option value="custom">Other amount</option></select></label>
               <label id="budget-custom-field" class="field guided-other" hidden><span>Other budget in TWD</span><input name="budget_custom" type="number" min="1" max="1000000000000" step="1" inputmode="numeric" placeholder="Enter the approved total budget"></label>
               <label class="field"><span>Planned opening date <b aria-hidden="true">*</b></span><input name="opening_date" type="date" min="2000-01-01" max="2100-12-31" required></label>
@@ -70,7 +70,7 @@
           <fieldset class="guided-step">
             <legend><span>2</span>Choose document status</legend>
             <p id="focus-summary" class="focus-summary">Select a store type to load its essential documents, site and equipment checks, and people tasks.</p>
-            <p class="step-help">Mark every item as acquired, missing, or not applicable. Confirm actual requirements with the local authority.</p>
+            <p class="step-help">Mark every item as acquired, missing, or not applicable. Confirm actual requirements with the competent local authority or a qualified professional in Taiwan.</p>
             <div class="status-list">
               <label class="status-row" data-document-slot="0" data-document-name="Lease and retail-use consent"><span>Lease and retail-use consent</span><select aria-label="Lease and retail-use consent status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
               <label class="status-row" data-document-slot="1" data-document-name="Business registration materials"><span>Business registration materials</span><select aria-label="Business registration materials status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
@@ -140,6 +140,6 @@
 
   <dialog id="decision-dialog" aria-labelledby="confirm-title"><form method="dialog" class="dialog-card"><span class="dialog-icon" aria-hidden="true">!</span><h2 id="confirm-title">Confirm your decision</h2><p id="confirm-copy"></p><div class="dialog-actions"><button id="cancel-decision" class="button button-ghost" value="cancel">Return to review</button><button id="confirm-decision" class="button button-primary" value="default">Confirm and submit</button></div></form></dialog>
   <dialog id="rescue-dialog" aria-labelledby="rescue-confirm-title"><form method="dialog" class="dialog-card"><span class="dialog-icon" aria-hidden="true">!</span><h2 id="rescue-confirm-title">Confirm rescue strategy</h2><p id="rescue-confirm-copy"></p><div class="dialog-actions"><button id="cancel-rescue" class="button button-ghost" value="cancel">Return to comparison</button><button id="confirm-rescue" class="button button-primary" value="default">Confirm and record</button></div></form></dialog>
-  <footer><p>StoreReady Agent · Pre-opening planning and risk decisions</p><p>Always confirm requirements with local authorities and qualified professionals.</p></footer>
+  <footer><p>StoreReady Agent · Physical-store launch planning in Taiwan</p><p>This tool is not legal advice or regulatory approval. Confirm current requirements with the competent local authorities and qualified professionals in Taiwan.</p></footer>
 </body>
 </html>

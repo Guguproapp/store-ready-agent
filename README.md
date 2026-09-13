@@ -1,18 +1,20 @@
 # StoreReady Agent
 
-StoreReady Agent is an end-to-end pre-opening readiness workspace for physical-store owners. It turns a messy opening brief into a dependency-aware launch plan, deterministic risk calculations, an independent AI review, explicit human approvals, and an auditable readiness report.
+StoreReady Agent is a Taiwan-first, end-to-end pre-opening readiness workspace for physical-store owners. It turns a messy opening brief into a dependency-aware launch plan, deterministic risk calculations, an independent AI review, explicit human approvals, and an auditable readiness report.
+
+Both interfaces use the same Taiwan-focused planning logic. Traditional Chinese is the primary product language; the English interface supports English-speaking founders opening in Taiwan and international judges. It does not switch the product to another country's requirements or claim universal regulatory coverage.
 
 Built for the **Professional Agents** track of the AWS Agents for Humans Hackathon with the Strands Agents SDK and Amazon Bedrock.
 
 > **DEMO ONLY:** Use fictional data. This is not a production service and does not submit permits, send messages, make purchases, sign contracts, or approve decisions on a user's behalf.
 
-[Open the bilingual judge demo](https://predictions-windsor-hope-sophisticated.trycloudflare.com/) · [English interface](https://predictions-windsor-hope-sophisticated.trycloudflare.com/en) · [Judge testing guide](docs/JUDGING_GUIDE.md) · [Architecture](docs/ARCHITECTURE.md)
+[Open the Traditional Chinese judge demo](https://store-ready-agent.onrender.com/) · [English interface](https://store-ready-agent.onrender.com/en) · [Judge testing guide](docs/JUDGING_GUIDE.md) · [Architecture](docs/ARCHITECTURE.md)
 
 ![StoreReady Agent architecture](docs/architecture-diagram.svg)
 
 ## The problem
 
-Opening a physical store requires owners to coordinate documents, contractors, equipment, staff training, budgets, and a hard opening date. These items depend on each other, but are often managed across notes and spreadsheets. The result is late surprises and unclear human decisions.
+Opening a physical store in Taiwan requires owners to coordinate documents, contractors, equipment, staff training, budgets, and a hard opening date. These items depend on each other, but are often managed across notes and spreadsheets. The result is late surprises and unclear human decisions.
 
 StoreReady Agent handles this **pre-opening readiness workflow end to end**:
 
@@ -42,7 +44,7 @@ Launch Manager explains the trade-offs; Readiness Reviewer independently recompu
 same immutable scenario. A human radio selection plus confirmation records a choice but
 never changes the plan, spends money or performs an external action.
 
-The project intentionally focuses on the complete pre-opening workflow. Opening-day operations and post-opening business analytics are future roadmap items, not unimplemented claims in this submission.
+The project intentionally focuses on the complete pre-opening workflow for physical stores in Taiwan. Opening-day operations, post-opening business analytics, and other-country rule packs are future roadmap items, not unimplemented claims in this submission.
 
 ## Two-Agent architecture
 
@@ -71,8 +73,8 @@ Open `http://127.0.0.1:8000`. The default public-safe mode never invokes Bedrock
 ## Judge deployment
 
 The repository includes `render.yaml` for a free public judge DEMO on Render. It binds the
-existing Python server to Render's assigned port, keeps Live Bedrock execution disabled, uses
-`/health`, and disables automatic redeployment. Render Free services may sleep after inactivity
+existing Python server to Render's assigned port, keeps Live Bedrock execution disabled, and uses
+`/health`. Render Free services may sleep after inactivity
 and have an ephemeral filesystem, so fictional DEMO sessions can reset after a restart. No real
 or durable data belongs in this deployment.
 
@@ -95,7 +97,7 @@ AWS_PROFILE=launchpilot AWS_REGION=ap-southeast-2 \
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The verified bilingual candidate passes 75 automated tests. The responsive interface passed
+The verified bilingual candidate passes 78 automated tests. The responsive interface passed
 Browser QA at 1440×900, 768×1024, and 390×844 with no page-level horizontal overflow; the
 English entry also passed complete workflow QA and Safari loading checks. Mutation endpoints
 require a same-site Session and CSRF token;
@@ -113,7 +115,9 @@ storage limits fail closed.
 
 ## 中文說明
 
-開店就緒助手（內部代號 LaunchPilot）是 AWS Agents for Humans Hackathon 的 Professional Agents 新專案。它把虛構實體店的開幕資料轉為倒排工作計畫、完整關鍵路徑、文件／預算／時程風險、準備度分數及待人工決定事項。
+開店就緒助手（內部代號 LaunchPilot）是以台灣地區實體店為主的開幕前準備產品，也是 AWS Agents for Humans Hackathon 的 Professional Agents 新專案。它把虛構店家的開幕資料轉為倒排工作計畫、完整關鍵路徑、文件／預算／時程風險、準備度分數及待人工決定事項。
+
+中文版是主要介面；英文版提供在台灣開店的英語使用者與國際評審操作。兩個介面共用同一套台灣開店規劃邏輯，不代表產品已支援其他國家，也不宣稱涵蓋台灣所有即時法規或主管機關要求。
 
 目前是隔離、noindex 的 DEMO，不是 Production，不使用正式店家或個人資料。
 
@@ -193,4 +197,4 @@ git diff --check
 
 JUnit 去識別化步驟會移除 hostname 並正規化本機家目錄；提交前必須確認產物沒有任何作業系統的使用者家目錄、`.local` 或 `hostname=`。
 
-完整部署與回復方式見 `docs/DEPLOYMENT_RUNBOOK.md`。已知限制：週末以外的各地國定假日尚未納入；自訂待辦會標示為未排程但不會自動推測工期或相依關係；DEMO 無正式登入與多租戶；公開測試版不提供付費 Live 呼叫。
+完整部署與回復方式見 `docs/DEPLOYMENT_RUNBOOK.md`。已知限制：目前只提供台灣開店規劃；週末以外的各地國定假日尚未納入；縣市選項不等於已涵蓋各地方主管機關的全部現行要求；自訂待辦會標示為未排程但不會自動推測工期或相依關係；DEMO 無正式登入與多租戶；公開測試版不提供付費 Live 呼叫。
