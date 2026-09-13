@@ -5,6 +5,8 @@ docs/DEVPOST_DRAFT.md
 docs/JUDGING_GUIDE.md
 docs/LIVE_EVIDENCE.md
 docs/PUBLIC_REPO_READINESS.md
+docs/SBOM.md
+docs/THIRD_PARTY_NOTICES.md
 docs/VIDEO_SCRIPT_EN.md
 docs/architecture-diagram.svg
 pyproject.toml

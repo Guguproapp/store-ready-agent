@@ -92,7 +92,7 @@ After the hackathon, the same safety architecture could support configurable loc
 
 ## New work and disclosure
 
-The project was created during the 2026 submission period. Work in this package includes the deterministic planner, SQLite schema, two-agent orchestration, human-decision boundary, web DEMO, tests and evidence. Standard open-source dependencies include Python, Strands Agents SDK, boto3/botocore and development test tools. AI coding assistance was used and will be disclosed in the submission.
+The project was created during the 2026 submission period. Work in this package includes the deterministic planner, SQLite schema, two-agent orchestration, human-decision boundary, web DEMO, tests and evidence. Standard open-source dependencies include Python, Strands Agents SDK, boto3/botocore and development test tools. OpenAI Codex assisted with implementation, test generation, debugging, copy editing, and read-only review under the entrant's product direction. The entrant retained all product, safety, publication, and submission decisions. No pre-existing commercial product, customer code, customer data, or private third-party source was incorporated.
 
 ## Submission timing
 

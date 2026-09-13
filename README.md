@@ -182,8 +182,8 @@ STORE_READY_ENABLE_LIVE=1 AWS_PROFILE=launchpilot AWS_REGION=ap-southeast-2 \
 ## 測試
 
 ```bash
-.venv/bin/pytest -q --junitxml=reports/commercial-ui/test-results/pytest.xml
-.venv/bin/python scripts/sanitize_junit.py reports/commercial-ui/test-results/pytest.xml
+.venv/bin/pytest -q --junitxml=/tmp/store-ready-agent-pytest.xml
+.venv/bin/python scripts/sanitize_junit.py /tmp/store-ready-agent-pytest.xml
 .venv/bin/ruff check src scripts tests
 .venv/bin/ruff format --check src scripts tests
 .venv/bin/mypy src scripts tests
@@ -191,6 +191,6 @@ STORE_READY_ENABLE_LIVE=1 AWS_PROFILE=launchpilot AWS_REGION=ap-southeast-2 \
 git diff --check
 ```
 
-JUnit 去識別化步驟會移除 hostname 並正規化本機家目錄；提交前必須確認產物沒有 `/Users/`、`/home/`、`\\Users\\`、`.local` 或 `hostname=`。
+JUnit 去識別化步驟會移除 hostname 並正規化本機家目錄；提交前必須確認產物沒有任何作業系統的使用者家目錄、`.local` 或 `hostname=`。
 
 完整部署與回復方式見 `docs/DEPLOYMENT_RUNBOOK.md`。已知限制：週末以外的各地國定假日尚未納入；自訂待辦會標示為未排程但不會自動推測工期或相依關係；DEMO 無正式登入與多租戶；公開測試版不提供付費 Live 呼叫。

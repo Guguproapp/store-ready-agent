@@ -26,6 +26,8 @@ PUBLIC_ENTRIES = (
     "docs/JUDGING_GUIDE.md",
     "docs/LIVE_EVIDENCE.md",
     "docs/PUBLIC_REPO_READINESS.md",
+    "docs/SBOM.md",
+    "docs/THIRD_PARTY_NOTICES.md",
     "docs/VIDEO_SCRIPT_EN.md",
     "docs/architecture-diagram.svg",
 )
@@ -36,7 +38,10 @@ SECRET_PATTERNS = (
     re.compile(r"aws_secret_access_key\s*[:=]\s*[A-Za-z0-9/+]{20,}", re.IGNORECASE),
     re.compile(r"aws_session_token\s*[:=]\s*[A-Za-z0-9/+=]{40,}", re.IGNORECASE),
 )
-LOCAL_PATH_MARKERS = (str(Path.home().resolve()) + "/",)
+LOCAL_PATH_PATTERNS = (
+    re.compile(r"/(?:Users|home)/[A-Za-z0-9._-]+/"),
+    re.compile(r"[A-Za-z]:\\Users\\[A-Za-z0-9._-]+\\"),
+)
 
 
 def _inside_root(path: Path) -> bool:
@@ -75,7 +80,7 @@ def _scan(destination: Path) -> list[str]:
         content = path.read_text(encoding="utf-8")
         if any(pattern.search(content) for pattern in SECRET_PATTERNS):
             raise ValueError(f"secret pattern found in public file: {relative}")
-        if any(marker in content for marker in LOCAL_PATH_MARKERS):
+        if any(pattern.search(content) for pattern in LOCAL_PATH_PATTERNS):
             raise ValueError(f"local path found in public file: {relative}")
     return manifest
 
