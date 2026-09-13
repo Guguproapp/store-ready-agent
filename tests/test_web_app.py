@@ -113,7 +113,7 @@ class WebSurfaceTests(unittest.TestCase):
                     csrf_token = json.loads(response.read())["csrf_token"]
                 payload = {
                     "store_type": "虛構測試店",
-                    "location": "虛構地點",
+                    "location": "台北市虛構地點",
                     "budget": 800000,
                     "opening_date": "0001-01-01",
                     "acquired_documents": [],
@@ -226,7 +226,7 @@ class WebSurfaceTests(unittest.TestCase):
                 analysis_body = json.dumps(
                     {
                         "store_type": "虛構測試店",
-                        "location": "虛構地點",
+                        "location": "台北市虛構地點",
                         "budget": 800000,
                         "opening_date": "2026-10-30",
                         "acquired_documents": ["租約"],

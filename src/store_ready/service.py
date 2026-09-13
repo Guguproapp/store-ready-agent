@@ -34,6 +34,68 @@ MAX_STORED_DEMO_PROJECTS = 500
 DEMO_DATA_TTL_HOURS = 2
 MIN_OPENING_DATE = date(2000, 1, 1)
 MAX_OPENING_DATE = date(2100, 12, 31)
+TAIWAN_JURISDICTIONS_ZH = (
+    "基隆市",
+    "台北市",
+    "臺北市",
+    "新北市",
+    "桃園市",
+    "新竹市",
+    "新竹縣",
+    "宜蘭縣",
+    "苗栗縣",
+    "台中市",
+    "臺中市",
+    "彰化縣",
+    "南投縣",
+    "雲林縣",
+    "嘉義市",
+    "嘉義縣",
+    "台南市",
+    "臺南市",
+    "高雄市",
+    "屏東縣",
+    "花蓮縣",
+    "台東縣",
+    "臺東縣",
+    "澎湖縣",
+    "金門縣",
+    "連江縣",
+)
+TAIWAN_JURISDICTIONS_EN = frozenset(
+    {
+        "Keelung City",
+        "Taipei City",
+        "New Taipei City",
+        "Taoyuan City",
+        "Hsinchu City",
+        "Hsinchu County",
+        "Yilan County",
+        "Miaoli County",
+        "Taichung City",
+        "Changhua County",
+        "Nantou County",
+        "Yunlin County",
+        "Chiayi City",
+        "Chiayi County",
+        "Tainan City",
+        "Kaohsiung City",
+        "Pingtung County",
+        "Hualien County",
+        "Taitung County",
+        "Penghu County",
+        "Kinmen County",
+        "Lienchiang County",
+    }
+)
+
+
+def _is_taiwan_location(value: str) -> bool:
+    normalized = value.strip()
+    if any(normalized.startswith(name) for name in TAIWAN_JURISDICTIONS_ZH):
+        return True
+    jurisdiction = normalized.replace("／", "/").split("/", 1)[0].strip()
+    return jurisdiction in TAIWAN_JURISDICTIONS_EN
 
 
 def _strings(payload: Mapping[str, Any], key: str) -> tuple[str, ...]:
@@ -63,6 +125,8 @@ def parse_project_payload(payload: Mapping[str, Any]) -> ProjectInput:
         raise ValueError("INVALID_LOCATION")
     if len(location.strip()) > MAX_LOCATION_LENGTH:
         raise ValueError("LOCATION_TOO_LONG")
+    if not _is_taiwan_location(location):
+        raise ValueError("LOCATION_OUTSIDE_TAIWAN")
     try:
         budget = float(payload["budget"])
     except (KeyError, TypeError, ValueError) as exc:

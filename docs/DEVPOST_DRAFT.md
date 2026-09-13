@@ -62,7 +62,7 @@ On 2026-09-12, the real integration ran with Strands Agents SDK 1.55.0 and Amazo
 
 The bilingual judge surface is a public-safe DEMO. Its public Live endpoint is disabled by default to prevent unmetered AWS use; the saved Live evidence and local integration test demonstrate the Bedrock path without exposing credentials or an unlimited paid endpoint.
 
-The verified bilingual submission package passed 78 automated tests, Ruff, formatting, Mypy, Python compilation, JavaScript syntax, wheel packaging, dependency checks, and secret scans. The responsive UI passed exact Browser QA at 1440×900, 768×1024, and 390×844 without page-level horizontal overflow; the English workflow and Safari loading checks also passed.
+The verified bilingual submission package passed 80 automated tests, Ruff, formatting, Mypy, Python compilation, JavaScript syntax, wheel packaging, dependency checks, and secret scans. The responsive UI passed exact Browser QA at 1440×900, 768×1024, and 390×844 without page-level horizontal overflow; the English workflow and Safari loading checks also passed.
 
 ## Challenges
 

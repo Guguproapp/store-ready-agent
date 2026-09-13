@@ -97,7 +97,7 @@ AWS_PROFILE=launchpilot AWS_REGION=ap-southeast-2 \
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The verified bilingual candidate passes 78 automated tests. The responsive interface passed
+The verified bilingual candidate passes 80 automated tests. The responsive interface passed
 Browser QA at 1440×900, 768×1024, and 390×844 with no page-level horizontal overflow; the
 English entry also passed complete workflow QA and Safari loading checks. Mutation endpoints
 require a same-site Session and CSRF token;
@@ -197,4 +197,4 @@ git diff --check
 
 JUnit 去識別化步驟會移除 hostname 並正規化本機家目錄；提交前必須確認產物沒有任何作業系統的使用者家目錄、`.local` 或 `hostname=`。
 
-完整部署與回復方式見 `docs/DEPLOYMENT_RUNBOOK.md`。已知限制：目前只提供台灣開店規劃；週末以外的各地國定假日尚未納入；縣市選項不等於已涵蓋各地方主管機關的全部現行要求；自訂待辦會標示為未排程但不會自動推測工期或相依關係；DEMO 無正式登入與多租戶；公開測試版不提供付費 Live 呼叫。
+完整部署與回復方式見 `docs/DEPLOYMENT_RUNBOOK.md`。前端縣市選項與後端 API 都限制為台灣 22 縣市（中英文名稱皆可），境外地點會直接拒絕。已知限制：目前只提供台灣開店規劃；週末以外的各地國定假日尚未納入；縣市限制不等於已涵蓋各地方主管機關的全部現行要求；自訂待辦會標示為未排程但不會自動推測工期或相依關係；DEMO 無正式登入與多租戶；公開測試版不提供付費 Live 呼叫。

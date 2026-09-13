@@ -44,6 +44,21 @@ class ServiceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "INVALID_BUDGET"):
             analyze_payload(payload)
 
+    def test_locations_outside_taiwan_are_rejected(self) -> None:
+        for location in ("Tokyo, Japan", "New York, United States", "虛構地點"):
+            payload = demo_payload()
+            payload["location"] = location
+            with self.subTest(location=location):
+                with self.assertRaisesRegex(ValueError, "LOCATION_OUTSIDE_TAIWAN"):
+                    analyze_payload(payload)
+
+    def test_chinese_and_english_taiwan_locations_are_accepted(self) -> None:
+        for location in ("臺中市西區（虛構示例）", "Taipei City / Residential commercial area"):
+            payload = demo_payload()
+            payload["location"] = location
+            with self.subTest(location=location):
+                self.assertEqual(analyze_payload(payload)["project"]["location"], location)
+
     def test_input_limits_and_non_finite_numbers_are_rejected(self) -> None:
         cases = []
         payload = demo_payload()

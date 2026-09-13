@@ -59,6 +59,7 @@ persisted, or accepted through chat. Missing credentials stop the preflight with
 - Manager is capped at 6 model cycles, Reviewer at 5, each model output at 1,024 tokens, one controlled tool retry, and the whole invocation at 120 seconds.
 - Live evidence stores versions, model, region, tool IDs, status, latency, output hashes, token totals and stop reasons, but never raw prompts, model output, AWS identity or credentials.
 - Request bodies are capped at 64 KiB and serialized Agent input at 16 KiB.
+- Browser choices and API validation both restrict project locations to Taiwan's twenty-two cities and counties; out-of-scope locations fail closed before analysis.
 - Mutation APIs require a same-site browser session and CSRF token. Report and Audit API reads require the project-owning session. Human decisions are one-shot.
 - Rescue source JSON includes schema/version plus complete project and task/dependency
   state. Server-side source, shock and result SHA-256 mismatch fails closed before a
