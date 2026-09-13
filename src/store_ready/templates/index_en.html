@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="StoreReady Agent | Launch readiness workspace for physical stores">
+  <title>StoreReady Agent | Launch Readiness Workspace</title>
+  <link rel="alternate" hreflang="zh-Hant" href="/">
+  <link rel="stylesheet" href="/assets/app.css?v=13">
+  <script src="/assets/app-en.js?v=15" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to main content</a>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="StoreReady Agent home">
+      <span class="brand-mark" aria-hidden="true">SR</span>
+      <span><strong>StoreReady Agent</strong><small>Launch readiness workspace</small></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#top">Home</a><a href="#planner">Build plan</a><a href="#dashboard">Readiness</a><a href="#rescue">Launch rescue</a><a href="#approvals">Your approval</a>
+    </nav>
+    <div class="top-actions">
+      <a class="button button-ghost" href="/" hreflang="zh-Hant">Traditional Chinese</a>
+      <span class="environment-badge">Sample data</span>
+      <span id="service-state" class="service-state" role="status">Checking service</span>
+    </div>
+  </header>
+
+  <main id="workspace" class="app-shell">
+    <section id="top" class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Plan, review, and keep the final decision human</p>
+        <h1 id="page-title">See every pre-opening task, risk, and deadline<br>in one clear workspace.</h1>
+        <p class="hero-copy">Find the essential documents, site, equipment, and staffing gaps for your store type. Calculate each task's last safe completion date, then compare three recovery options when work slips.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#planner">Check launch risk</a><a class="button button-ghost" href="#index-overview">See three core capabilities</a></div>
+      </div>
+      <div class="hero-assurance" aria-label="Product safety boundary"><span class="assurance-icon" aria-hidden="true">✓</span><div><strong>You make the final decision</strong><p>Agents never file applications, pay, sign contracts, or approve risks for you.</p></div></div>
+    </section>
+
+    <section id="index-overview" class="index-overview" aria-labelledby="index-title">
+      <div class="index-heading"><p class="section-kicker">PRODUCT OVERVIEW</p><h2 id="index-title">Control the three launch issues most likely to derail opening day</h2><p>Instead of flooding you with generic advice, this workspace concentrates the decisions that directly affect your opening date.</p></div>
+      <div class="index-card-grid">
+        <article class="index-card"><span>01</span><h3>Last safe completion dates</h3><p>Calculate when each task must finish from workday durations and dependencies.</p></article>
+        <article class="index-card"><span>02</span><h3>Store-specific gaps</h3><p>Show only the essential documents, site, equipment, and people items for the selected store type.</p></article>
+        <article class="index-card"><span>03</span><h3>Launch rescue choices</h3><p>Compare date-first, budget-first, and lowest-risk recovery options, then leave the choice to you.</p></article>
+      </div>
+      <p class="scope-strip"><strong>Product scope:</strong> pre-opening planning only. No post-opening operations, payment, filing, or automatic purchasing.</p>
+    </section>
+
+    <section class="workspace-grid">
+      <aside id="planner" class="panel planner-panel" aria-labelledby="planner-title">
+        <div class="panel-heading"><div><p class="section-kicker">STORE INPUTS</p><h2 id="planner-title">Build a launch plan</h2></div><button id="sample-fill" class="button button-ghost" type="button">Load sample</button></div>
+        <p class="helper">Choose store details and document status, then check the work already completed.</p>
+        <form id="project-form">
+          <fieldset class="guided-step">
+            <legend><span>1</span>Choose store conditions</legend>
+            <div class="field-grid">
+              <label class="field"><span>Store type <b aria-hidden="true">*</b></span><select id="store-type" name="store_type" required><option value="">Choose a store type</option><option>Street coffee shop</option><option>Beverage shop</option><option>Restaurant or food stall</option><option>Bakery or dessert shop</option><option>Food retail store</option><option>General retail store</option><option>Beauty, hair, or nail studio</option><option>Pet service store</option><option>Fitness or sports studio</option><option>Education or arts classroom</option><option>Lifestyle service store</option><option>Food cart or pop-up store</option><option value="other">Other store type</option></select></label>
+              <label id="store-type-other-field" class="field guided-other" hidden><span>Other store type</span><input name="store_type_other" maxlength="80" placeholder="Example: bicycle repair shop"></label>
+              <label class="field"><span>City or county <b aria-hidden="true">*</b></span><select id="location-city" name="location_city" required><option value="">Choose a city or county</option><optgroup label="North"><option>Keelung City</option><option>Taipei City</option><option>New Taipei City</option><option>Taoyuan City</option><option>Hsinchu City</option><option>Hsinchu County</option><option>Yilan County</option></optgroup><optgroup label="Central"><option>Miaoli County</option><option>Taichung City</option><option>Changhua County</option><option>Nantou County</option><option>Yunlin County</option></optgroup><optgroup label="South"><option>Chiayi City</option><option>Chiayi County</option><option>Tainan City</option><option>Kaohsiung City</option><option>Pingtung County</option></optgroup><optgroup label="East and islands"><option>Hualien County</option><option>Taitung County</option><option>Penghu County</option><option>Kinmen County</option><option>Lienchiang County</option></optgroup><option value="other">Other location</option></select></label>
+              <label class="field"><span>Area type <b aria-hidden="true">*</b></span><select id="location-area" name="location_area" required><option value="">Choose an area type</option><option>Residential commercial area</option><option>Office commercial area</option><option>Transit area</option><option>Tourist commercial area</option><option>Neighborhood storefront</option><option value="other">Other area</option></select></label>
+              <label id="location-other-field" class="field guided-other" hidden><span>Other location</span><input name="location_other" maxlength="160" placeholder="Example: East District, Hsinchu City"></label>
+              <label class="field"><span>Total budget in TWD <b aria-hidden="true">*</b></span><select id="budget-range" name="budget_range" required><option value="">Choose a budget</option><option value="300000">TWD 300,000</option><option value="500000">TWD 500,000</option><option value="800000">TWD 800,000</option><option value="1200000">TWD 1,200,000</option><option value="2000000">TWD 2,000,000</option><option value="3000000">TWD 3,000,000</option><option value="5000000">TWD 5,000,000</option><option value="custom">Other amount</option></select></label>
+              <label id="budget-custom-field" class="field guided-other" hidden><span>Other budget in TWD</span><input name="budget_custom" type="number" min="1" max="1000000000000" step="1" inputmode="numeric" placeholder="Enter the approved total budget"></label>
+              <label class="field"><span>Planned opening date <b aria-hidden="true">*</b></span><input name="opening_date" type="date" min="2000-01-01" max="2100-12-31" required></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="guided-step">
+            <legend><span>2</span>Choose document status</legend>
+            <p id="focus-summary" class="focus-summary">Select a store type to load its essential documents, site and equipment checks, and people tasks.</p>
+            <p class="step-help">Mark every item as acquired, missing, or not applicable. Confirm actual requirements with the local authority.</p>
+            <div class="status-list">
+              <label class="status-row" data-document-slot="0" data-document-name="Lease and retail-use consent"><span>Lease and retail-use consent</span><select aria-label="Lease and retail-use consent status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
+              <label class="status-row" data-document-slot="1" data-document-name="Business registration materials"><span>Business registration materials</span><select aria-label="Business registration materials status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
+              <label class="status-row" data-document-slot="2" data-document-name="Building-use and business-premises proof"><span>Building-use and business-premises proof</span><select aria-label="Building-use and business-premises proof status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
+              <label class="status-row" data-document-slot="3" data-document-name="Fire safety equipment inspection records"><span>Fire safety equipment inspection records</span><select aria-label="Fire safety equipment inspection records status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
+              <label class="status-row" data-document-slot="4" data-document-name="Product sourcing and liability insurance records"><span>Product sourcing and liability insurance records</span><select aria-label="Product sourcing and liability insurance records status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
+              <label class="status-row" data-document-slot="5" data-document-name="Product labeling and price checklist"><span>Product labeling and price checklist</span><select aria-label="Product labeling and price checklist status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
+              <label class="status-row" data-document-slot="6" data-document-name="Checkout and invoice setup records"><span>Checkout and invoice setup records</span><select aria-label="Checkout and invoice setup records status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
+              <label class="status-row" data-document-slot="7" data-document-name="Staff emergency contact and safety records"><span>Staff emergency contact and safety records</span><select aria-label="Staff emergency contact and safety records status" required><option value="">Choose status</option><option value="missing">Missing</option><option value="acquired">Acquired</option><option value="na">Not applicable</option></select></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="guided-step">
+            <legend><span>3</span>Check completed work</legend>
+            <p class="step-help">Check finished items. Unchecked items automatically remain pending.</p>
+            <div class="task-checklist">
+              <p class="task-subgroup">SITE AND EQUIPMENT</p>
+              <label class="task-choice" data-task-slot="0" data-task-name="Confirm lease and retail use"><input type="checkbox"><span>Confirm lease and retail use</span></label>
+              <label class="task-choice" data-task-slot="1" data-task-name="Review registration, premises, and fire documents"><input type="checkbox"><span>Review registration, premises, and fire documents</span></label>
+              <label class="task-choice" data-task-slot="2" data-task-name="Confirm power, internet, and security conditions"><input type="checkbox"><span>Confirm power, internet, and security conditions</span></label>
+              <label class="task-choice" data-task-slot="3" data-task-name="Complete layout, display, and safety work"><input type="checkbox"><span>Complete layout, display, and safety work</span></label>
+              <label class="task-choice" data-task-slot="4" data-task-name="Test shelving, checkout, and inventory equipment"><input type="checkbox"><span>Test shelving, checkout, and inventory equipment</span></label>
+              <p class="task-subgroup">SUPPLY AND OPERATIONS</p>
+              <label class="task-choice" data-task-slot="5" data-task-name="Complete suppliers, product specifications, and initial stock"><input type="checkbox"><span>Complete suppliers, product specifications, and initial stock</span></label>
+              <label class="task-choice" data-task-slot="6" data-task-name="Complete pricing, checkout, and return procedures"><input type="checkbox"><span>Complete pricing, checkout, and return procedures</span></label>
+              <p class="task-subgroup">PEOPLE AND LAUNCH</p>
+              <label class="task-choice" data-task-slot="7" data-task-name="Complete hiring, shifts, and responsibilities"><input type="checkbox"><span>Complete hiring, shifts, and responsibilities</span></label>
+              <label class="task-choice" data-task-slot="8" data-task-name="Complete product, service, and safety training"><input type="checkbox"><span>Complete product, service, and safety training</span></label>
+              <label class="task-choice" data-task-slot="9" data-task-name="Complete inventory, soft opening, and launch drill"><input type="checkbox"><span>Complete inventory, soft opening, and launch drill</span></label>
+            </div>
+          </fieldset>
+
+          <details class="advanced-fields"><summary>Add itemized estimates when available (optional)</summary><p class="step-help">Enter only estimates you already have. Leave all fields blank when data is unavailable.</p><div class="budget-item-grid">
+            <label class="field"><span data-budget-label="0">Basic utilities and fit-out</span><input name="budget_fitout" data-budget-item type="number" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+            <label class="field"><span data-budget-label="1">Shelving, checkout, and inventory equipment</span><input name="budget_equipment" data-budget-item type="number" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+            <label class="field"><span data-budget-label="2">Registration, fire safety, and insurance</span><input name="budget_opening" data-budget-item type="number" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+            <label class="field"><span data-budget-label="3">Hiring, training, and initial stock</span><input name="budget_people" data-budget-item type="number" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+          </div></details>
+          <div class="privacy-note"><span aria-hidden="true">●</span><p><strong>Use sample or de-identified data.</strong><br>Do not enter names, phone numbers, accounts, credentials, or customer information.</p></div>
+          <div class="form-actions"><button id="submit-plan" class="button button-primary" type="submit"><span>Build and analyze plan</span><span aria-hidden="true">→</span></button><button id="live-run" class="button button-secondary" type="button" hidden disabled>Run dual-agent analysis</button></div>
+        </form>
+      </aside>
+
+      <div class="content-column">
+        <section class="panel execution-panel" aria-labelledby="execution-title"><div class="panel-heading"><div><p class="section-kicker">ANALYSIS FLOW</p><h2 id="execution-title">Analysis progress</h2></div><span id="run-mode" class="mode-badge">Not started</span></div><p id="status" class="status-message" role="status" aria-live="polite">Load the sample or enter data to begin.</p><ol id="run-steps" class="run-steps" aria-label="Analysis stages"><li data-step="input"><span>1</span><div><strong>Validate source data</strong><small>Check eight inputs and contradictions</small></div></li><li data-step="manager"><span>2</span><div><strong>Launch Manager Agent</strong><small>Build the plan and call calculation tools</small></div></li><li data-step="reviewer"><span>3</span><div><strong>Readiness Reviewer Agent</strong><small>Recalculate independently from source data</small></div></li><li data-step="report"><span>4</span><div><strong>Readiness report</strong><small>Wait for your approval</small></div></li></ol><button id="retry" class="button button-secondary" type="button" hidden>Retry last analysis</button></section>
+
+        <section id="empty-state" class="panel empty-state" aria-labelledby="empty-title"><div class="empty-graphic" aria-hidden="true"><span></span><span></span><span></span></div><p class="section-kicker">READY WHEN YOU ARE</p><h2 id="empty-title">The readiness dashboard is waiting for data</h2><p>After you complete the launch brief, this area shows dependencies, critical path, budget and timeline risk, agent differences, and items requiring human approval.</p></section>
+
+        <div id="result" hidden>
+          <section id="dashboard" class="panel dashboard-panel" aria-labelledby="dashboard-title"><div class="panel-heading"><div><p class="section-kicker">READINESS OVERVIEW</p><h2 id="dashboard-title">Launch readiness</h2></div><span id="source" class="source-badge">Source: —</span></div><div class="metric-grid"><article class="score-card"><div id="score-ring" class="score-ring"><span id="score">—</span><small>Readiness</small></div><div><strong id="readiness-label">Not assessed</strong><progress id="score-progress" max="100" value="0" aria-label="Readiness score">0%</progress><p>The score reflects documents, budget, completed work, and timeline risk.</p></div></article><article class="metric-card"><span class="metric-label">Task completion</span><strong id="completion">—</strong><small id="completion-note">Waiting for calculation</small></article><article class="metric-card"><span class="metric-label">Budget status</span><strong id="budget-state">—</strong><small id="budget-note">Waiting for calculation</small></article><article class="metric-card"><span class="metric-label">Current delay</span><strong id="delay-state">—</strong><small>workdays</small></article></div></section>
+          <section class="panel" aria-labelledby="risk-title"><div class="panel-heading"><div><p class="section-kicker">RISK CONTROL</p><h2 id="risk-title">Gaps and risks</h2></div><span id="risk-count" class="count-badge">0 items</span></div><div id="risk-grid" class="risk-grid"></div></section>
+          <section class="panel" aria-labelledby="schedule-title"><div class="panel-heading"><div><p class="section-kicker">CRITICAL PATH</p><h2 id="schedule-title">Task order and completion deadlines</h2></div><div class="legend"><span><i class="dot dot-critical"></i>Critical task</span><span><i class="dot dot-done"></i>Completed</span></div></div><div class="table-wrap"><table><thead><tr><th>Task</th><th>Status</th><th>Starts after</th><th>Start</th><th>Earliest finish</th><th>Last safe completion</th><th>Delay allowance</th><th>Duration</th></tr></thead><tbody id="schedule-body"></tbody></table></div></section>
+
+          <section id="rescue" class="panel rescue-panel" aria-labelledby="rescue-title"><div class="panel-heading"><div><p class="section-kicker">LAUNCH RESCUE</p><h2 id="rescue-title">Opening delay simulator</h2></div><span class="signature-badge">Core feature</span></div><p class="rescue-intro">See how one delayed task changes opening day. Enter the days you can recover and the quoted cost; dates and costs use only the data you provide.</p><form id="rescue-form"><fieldset><legend>Create a delay scenario without changing the original plan</legend><div class="rescue-fields"><label class="field"><span>Affected task</span><select id="rescue-task" name="task_id" required disabled><option value="">Build a plan first</option></select></label><label class="field"><span>Delay in workdays</span><input name="delay_workdays" type="number" min="1" max="60" step="1" value="4" required></label><label class="field"><span>Added cost in TWD</span><input name="direct_budget_shock" type="number" min="0" max="1000000000000" step="1" value="50000" required></label><label class="field"><span>Maximum days you can recover</span><input name="max_recoverable_workdays" type="number" min="0" max="60" step="1" value="4" required></label><label class="field"><span>Cost per recovered day in TWD</span><input name="recovery_cost_per_day" type="number" min="0" max="1000000000000" step="1" value="5000" placeholder="Leave blank if unknown"></label></div></fieldset><div class="rescue-actions"><button id="simulate-rescue" class="button button-primary" type="submit" disabled>Calculate delay impact</button><button id="live-rescue" class="button button-secondary" type="button" hidden disabled>Dual-agent review</button></div></form><p id="rescue-status" class="rescue-status" role="status" aria-live="polite">Build a launch plan before adding a delay scenario.</p><button id="rescue-retry" class="button button-secondary" type="button" hidden>Retry last simulation</button>
+            <div id="rescue-result" hidden><div class="rescue-comparison" aria-label="Original plan and delay comparison"><article><span>Planned opening</span><strong id="rescue-baseline-date">—</strong><small>Original plan (will not change)</small></article><article><span>If no action is taken</span><strong id="rescue-shock-date">—</strong><small id="rescue-delay-copy">—</small></article><article><span>Affected tasks</span><strong id="rescue-affected-count">—</strong><small id="rescue-affected-copy">—</small></article></div><div class="rescue-heading"><div><h3>Three recovery options</h3><p>Confirmation records your choice only. It never changes dates, tasks, or spending automatically.</p></div><span id="rescue-review-badge" class="agreement-badge">Calculation checked</span></div><div id="strategy-grid" class="strategy-grid" role="radiogroup" aria-label="Recovery options"></div><div class="rescue-agent-note"><div><strong>Launch Manager Agent</strong><p id="rescue-manager">Calculated three recovery options.</p></div><div><strong>Readiness Reviewer Agent</strong><p id="rescue-reviewer">Recalculated the same source data.</p></div></div><div class="rescue-choice"><button id="adopt-rescue" class="button button-approve" type="button" disabled>Confirm and record this choice</button><p id="rescue-choice-state">No option selected</p></div></div>
+          </section>
+
+          <section class="panel" aria-labelledby="agents-title"><div class="panel-heading"><div><p class="section-kicker">DUAL-AGENT REVIEW</p><h2 id="agents-title">Agent conclusions and differences</h2></div><span id="agreement-state" class="agreement-badge">Waiting for review</span></div><div class="agent-grid"><article class="agent-card manager-card"><div class="agent-head"><span class="agent-avatar">LM</span><div><strong>Launch Manager Agent</strong><small>Plan creation and risk summary</small></div></div><p id="manager">No conclusion yet.</p><ul id="manager-facts" class="fact-list"></ul></article><article class="agent-card reviewer-card"><div class="agent-head"><span class="agent-avatar">RR</span><div><strong>Readiness Reviewer Agent</strong><small>Independent, read-only recalculation</small></div></div><p id="reviewer">No review yet.</p><ul id="reviewer-facts" class="fact-list"></ul></article></div><div id="agent-difference" class="difference-note"></div></section>
+
+          <section id="approvals" class="panel approval-panel" aria-labelledby="approval-title"><div class="approval-copy"><p class="section-kicker">Human approval</p><h2 id="approval-title">Waiting for your approval</h2><p>Review the budget, document, and timeline risks. Artificial intelligence can recommend but cannot decide for you.</p><ul><li>Accept the current budget risk?</li><li>Keep the planned opening date?</li><li>Close required document gaps first?</li></ul></div><div class="approval-actions"><button id="approve" class="button button-approve" type="button" disabled>Approve plan</button><button id="reject" class="button button-reject" type="button" disabled>Reject plan</button><button id="defer" class="button button-secondary" type="button" disabled>Defer decision</button><p id="decision-state">Waiting for your decision</p></div></section>
+
+          <section class="panel report-panel" aria-labelledby="report-title"><div class="panel-heading"><div><p class="section-kicker">REPORT AND ACTIVITY</p><h2 id="report-title">Readiness report</h2></div><div class="report-actions"><button id="print-report" class="button button-ghost" type="button">Print or save report</button><a id="report-link" class="button button-secondary" hidden download="readiness-report.json">Download report data</a></div></div><article id="report-preview" class="report-preview"><div class="report-brand">StoreReady Agent</div><h3 id="report-project">No plan created</h3><p id="report-meta">—</p><div class="report-summary"><div><span>Readiness</span><strong id="report-score">—</strong></div><div><span>Critical tasks</span><strong id="report-critical">—</strong></div><div><span>Risk items</span><strong id="report-risks">—</strong></div></div><p id="report-conclusion">Run an analysis to create the summary.</p></article><div class="audit-heading"><h3>Activity log</h3><span>Records important actions without passwords or access keys</span></div><ol id="audit-log" class="audit-log"><li>No activity yet.</li></ol></section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="decision-dialog" aria-labelledby="confirm-title"><form method="dialog" class="dialog-card"><span class="dialog-icon" aria-hidden="true">!</span><h2 id="confirm-title">Confirm your decision</h2><p id="confirm-copy"></p><div class="dialog-actions"><button id="cancel-decision" class="button button-ghost" value="cancel">Return to review</button><button id="confirm-decision" class="button button-primary" value="default">Confirm and submit</button></div></form></dialog>
+  <dialog id="rescue-dialog" aria-labelledby="rescue-confirm-title"><form method="dialog" class="dialog-card"><span class="dialog-icon" aria-hidden="true">!</span><h2 id="rescue-confirm-title">Confirm rescue strategy</h2><p id="rescue-confirm-copy"></p><div class="dialog-actions"><button id="cancel-rescue" class="button button-ghost" value="cancel">Return to comparison</button><button id="confirm-rescue" class="button button-primary" value="default">Confirm and record</button></div></form></dialog>
+  <footer><p>StoreReady Agent · Pre-opening planning and risk decisions</p><p>Always confirm requirements with local authorities and qualified professionals.</p></footer>
+</body>
+</html>

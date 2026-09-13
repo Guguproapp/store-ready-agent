@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: store-ready-agent
+    runtime: python
+    plan: free
+    buildCommand: python -m pip install .
+    startCommand: STORE_READY_HOST=0.0.0.0 STORE_READY_PORT=$PORT python scripts/run_demo.py
+    healthCheckPath: /health
+    autoDeployTrigger: "off"

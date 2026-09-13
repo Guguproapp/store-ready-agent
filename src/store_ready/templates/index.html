@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="開店就緒助手｜實體店開幕準備工作台">
+  <title>開店就緒助手｜開幕準備工作台</title>
+  <link rel="stylesheet" href="/assets/app.css?v=13">
+  <script src="/assets/app.js?v=14" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">跳至主要內容</a>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="開店就緒助手首頁">
+      <span class="brand-mark" aria-hidden="true">開</span>
+      <span><strong>開店就緒助手</strong><small>開幕準備工作台</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="#top">首頁</a>
+      <a href="#planner">建立計畫</a>
+      <a href="#dashboard">準備度</a>
+      <a href="#rescue">開幕救援</a>
+      <a href="#approvals">你的確認</a>
+    </nav>
+    <div class="top-actions">
+      <a class="button button-ghost" href="/en" lang="en" hreflang="en">英文版</a>
+      <span class="environment-badge">範例資料</span>
+      <span id="service-state" class="service-state" role="status">正在確認服務</span>
+    </div>
+  </header>
+
+  <main id="workspace" class="app-shell">
+    <section id="top" class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">規劃、複核、由你決定</p>
+        <h1 id="page-title">把開幕前的工作、風險與期限，<br>一次整理清楚。</h1>
+        <p class="hero-copy">依你的店型找出重要文件、場地設備與人員準備缺口，算出每項工作的最晚完成日；遇到延誤時，再比較三種可執行的救援選擇。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#planner">開始檢查開幕風險</a>
+          <a class="button button-ghost" href="#index-overview">了解三個核心能力</a>
+        </div>
+      </div>
+      <div class="hero-assurance" aria-label="產品安全邊界">
+        <span class="assurance-icon" aria-hidden="true">✓</span>
+        <div><strong>最後決定由你確認</strong><p>代理不會代辦申請、付款、簽約或自動核准風險。</p></div>
+      </div>
+    </section>
+
+    <section id="index-overview" class="index-overview" aria-labelledby="index-title">
+      <div class="index-heading">
+        <p class="section-kicker">產品首頁</p>
+        <h2 id="index-title">開幕前先看清楚三個關鍵問題</h2>
+        <p>不把所有開店知識塞給你，而是把會影響開幕日的判斷集中在同一個工作台。</p>
+      </div>
+      <div class="index-card-grid">
+        <article class="index-card"><span>01</span><h3>最晚完成日</h3><p>依工作天數與前後順序，算出每項工作最晚何時完成，才不會影響預定開幕日。</p></article>
+        <article class="index-card"><span>02</span><h3>店型關鍵缺口</h3><p>選擇店型後，只顯示該店真正重要的文件、場地設備與人員準備。</p></article>
+        <article class="index-card"><span>03</span><h3>開幕救援選擇</h3><p>工作延誤時比較保日期、保預算與最低風險三種方案，最後由你確認。</p></article>
+      </div>
+      <p class="scope-strip"><strong>產品範圍：</strong>聚焦開幕前，不處理開店後營運、付款、申請送件或自動採購。</p>
+    </section>
+
+    <section class="workspace-grid">
+      <aside id="planner" class="panel planner-panel" aria-labelledby="planner-title">
+        <div class="panel-heading">
+          <div><p class="section-kicker">開店資料</p><h2 id="planner-title">建立開店計畫</h2></div>
+          <button id="sample-fill" class="button button-ghost" type="button">帶入示範資料</button>
+        </div>
+        <p class="helper">依序選擇店家條件、文件狀態，再勾選已完成工作即可。</p>
+
+        <form id="project-form">
+          <fieldset class="guided-step">
+            <legend><span>1</span>選擇店家條件</legend>
+            <div class="field-grid">
+              <label class="field"><span>店型 <b aria-hidden="true">*</b></span><select id="store-type" name="store_type" required><option value="">請選擇店型</option><option>街邊咖啡店</option><option>飲料店</option><option>餐廳／小吃店</option><option>烘焙／甜點店</option><option>食品零售店</option><option>一般零售門市</option><option>美容／美髮／美甲工作室</option><option>寵物服務店</option><option>健身／運動工作室</option><option>教育／才藝教室</option><option>生活服務門市</option><option>攤車／快閃店</option><option value="other">其他店型</option></select></label>
+              <label id="store-type-other-field" class="field guided-other" hidden><span>其他店型</span><input name="store_type_other" maxlength="80" placeholder="例：寵物美容店"></label>
+              <label class="field"><span>縣市 <b aria-hidden="true">*</b></span><select id="location-city" name="location_city" required><option value="">請選擇縣市</option><optgroup label="北部"><option>基隆市</option><option>台北市</option><option>新北市</option><option>桃園市</option><option>新竹市</option><option>新竹縣</option><option>宜蘭縣</option></optgroup><optgroup label="中部"><option>苗栗縣</option><option>台中市</option><option>彰化縣</option><option>南投縣</option><option>雲林縣</option></optgroup><optgroup label="南部"><option>嘉義市</option><option>嘉義縣</option><option>台南市</option><option>高雄市</option><option>屏東縣</option></optgroup><optgroup label="東部與離島"><option>花蓮縣</option><option>台東縣</option><option>澎湖縣</option><option>金門縣</option><option>連江縣</option></optgroup><option value="other">其他地點</option></select></label>
+              <label class="field"><span>店址類型 <b aria-hidden="true">*</b></span><select id="location-area" name="location_area" required><option value="">請選擇店址類型</option><option>住宅商圈</option><option>辦公商圈</option><option>車站周邊</option><option>觀光商圈</option><option>社區型店面</option><option value="other">其他區域</option></select></label>
+              <label id="location-other-field" class="field guided-other" hidden><span>其他地點</span><input name="location_other" maxlength="160" placeholder="例：新竹市東區"></label>
+              <label class="field"><span>總預算（新臺幣） <b aria-hidden="true">*</b></span><select id="budget-range" name="budget_range" required><option value="">請選擇預算</option><option value="300000">30萬元</option><option value="500000">50萬元</option><option value="800000">80萬元</option><option value="1200000">120萬元</option><option value="2000000">200萬元</option><option value="3000000">300萬元</option><option value="5000000">500萬元</option><option value="custom">其他金額</option></select></label>
+              <label id="budget-custom-field" class="field guided-other" hidden><span>其他預算（新臺幣）</span><input name="budget_custom" type="number" min="1" max="1000000000000" step="1" inputmode="numeric" placeholder="輸入核准總預算"></label>
+              <label class="field"><span>預定開幕日 <b aria-hidden="true">*</b></span><input name="opening_date" type="date" min="2000-01-01" max="2100-12-31" required></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="guided-step">
+            <legend><span>2</span>選擇文件狀態</legend>
+            <p id="focus-summary" class="focus-summary">選擇店型後，系統會換成該店型的關鍵文件、場地設備與人員檢查。</p>
+            <p class="step-help">每一項選擇「已取得、尚未取得或不適用」。實際要求仍以所在地主管機關為準。</p>
+            <div class="status-list">
+              <label class="status-row" data-document-slot="0" data-document-name="店面租約與營業用途同意文件"><span>店面租約與營業用途同意文件</span><select aria-label="店面租約與營業用途同意文件狀態" required><option value="">請選擇狀態</option><option value="missing">尚未取得</option><option value="acquired">已取得</option><option value="na">不適用</option></select></label>
+              <label class="status-row" data-document-slot="1" data-document-name="商業登記申請資料"><span>商業登記申請資料</span><select aria-label="商業登記申請資料狀態" required><option value="">請選擇狀態</option><option value="missing">尚未取得</option><option value="acquired">已取得</option><option value="na">不適用</option></select></label>
+              <label class="status-row" data-document-slot="2" data-document-name="建物使用與營業場所證明"><span>建物使用與營業場所證明</span><select aria-label="建物使用與營業場所證明狀態" required><option value="">請選擇狀態</option><option value="missing">尚未取得</option><option value="acquired">已取得</option><option value="na">不適用</option></select></label>
+              <label class="status-row" data-document-slot="3" data-document-name="消防安全設備檢查資料"><span>消防安全設備檢查資料</span><select aria-label="消防安全設備檢查資料狀態" required><option value="">請選擇狀態</option><option value="missing">尚未取得</option><option value="acquired">已取得</option><option value="na">不適用</option></select></label>
+              <label class="status-row" data-document-slot="4" data-document-name="商品來源與責任保險資料"><span>商品來源與責任保險資料</span><select aria-label="商品來源與責任保險資料狀態" required><option value="">請選擇狀態</option><option value="missing">尚未取得</option><option value="acquired">已取得</option><option value="na">不適用</option></select></label>
+              <label class="status-row" data-document-slot="5" data-document-name="商品標示與價格檢查表"><span>商品標示與價格檢查表</span><select aria-label="商品標示與價格檢查表狀態" required><option value="">請選擇狀態</option><option value="missing">尚未取得</option><option value="acquired">已取得</option><option value="na">不適用</option></select></label>
+              <label class="status-row" data-document-slot="6" data-document-name="收銀與發票設定資料"><span>收銀與發票設定資料</span><select aria-label="收銀與發票設定資料狀態" required><option value="">請選擇狀態</option><option value="missing">尚未取得</option><option value="acquired">已取得</option><option value="na">不適用</option></select></label>
+              <label class="status-row" data-document-slot="7" data-document-name="人員緊急聯絡與安全紀錄"><span>人員緊急聯絡與安全紀錄</span><select aria-label="人員緊急聯絡與安全紀錄狀態" required><option value="">請選擇狀態</option><option value="missing">尚未取得</option><option value="acquired">已取得</option><option value="na">不適用</option></select></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="guided-step">
+            <legend><span>3</span>勾選已完成工作</legend>
+            <p class="step-help">已完成就打勾；沒有打勾的項目會自動列入待辦。</p>
+            <div class="task-checklist">
+              <p class="task-subgroup">場地與設備</p>
+              <label class="task-choice" data-task-slot="0" data-task-name="確認租約與零售用途"><input type="checkbox"><span>確認租約與零售用途</span></label>
+              <label class="task-choice" data-task-slot="1" data-task-name="完成登記、場所與消防文件盤點"><input type="checkbox"><span>完成登記、場所與消防文件盤點</span></label>
+              <label class="task-choice" data-task-slot="2" data-task-name="確認用電、網路與保全條件"><input type="checkbox"><span>確認用電、網路與保全條件</span></label>
+              <label class="task-choice" data-task-slot="3" data-task-name="完成店面動線、陳列與安全工程"><input type="checkbox"><span>完成店面動線、陳列與安全工程</span></label>
+              <label class="task-choice" data-task-slot="4" data-task-name="完成貨架、收銀與盤點設備測試"><input type="checkbox"><span>完成貨架、收銀與盤點設備測試</span></label>
+              <p class="task-subgroup">供應與營運</p>
+              <label class="task-choice" data-task-slot="5" data-task-name="完成供應商、商品規格與首批進貨"><input type="checkbox"><span>完成供應商、商品規格與首批進貨</span></label>
+              <label class="task-choice" data-task-slot="6" data-task-name="完成定價、收銀與退換貨流程"><input type="checkbox"><span>完成定價、收銀與退換貨流程</span></label>
+              <p class="task-subgroup">人員與開幕</p>
+              <label class="task-choice" data-task-slot="7" data-task-name="完成招募、排班與職責配置"><input type="checkbox"><span>完成招募、排班與職責配置</span></label>
+              <label class="task-choice" data-task-slot="8" data-task-name="完成商品、服務與安全訓練"><input type="checkbox"><span>完成商品、服務與安全訓練</span></label>
+              <label class="task-choice" data-task-slot="9" data-task-name="完成盤點、試營運與開幕演練"><input type="checkbox"><span>完成盤點、試營運與開幕演練</span></label>
+            </div>
+          </fieldset>
+
+          <details class="advanced-fields">
+            <summary>有金額資料時再填預算明細（選填）</summary>
+            <p class="step-help">只填目前已確認的金額；沒有資料可以全部留白。</p>
+            <div class="budget-item-grid">
+              <label class="field"><span data-budget-label="0">店面水電與基本工程</span><input name="budget_fitout" data-budget-item type="number" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+              <label class="field"><span data-budget-label="1">貨架、收銀與盤點設備</span><input name="budget_equipment" data-budget-item type="number" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+              <label class="field"><span data-budget-label="2">登記、消防與保險</span><input name="budget_opening" data-budget-item type="number" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+              <label class="field"><span data-budget-label="3">招募、訓練與首批進貨</span><input name="budget_people" data-budget-item type="number" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+            </div>
+          </details>
+
+          <div class="privacy-note"><span aria-hidden="true">●</span><p><strong>請使用範例或去識別資料。</strong><br>不要輸入姓名、電話、帳號、憑證或客戶個資。</p></div>
+          <div class="form-actions">
+            <button id="submit-plan" class="button button-primary" type="submit"><span>建立並分析計畫</span><span aria-hidden="true">→</span></button>
+            <button id="live-run" class="button button-secondary" type="button" hidden disabled>執行雙代理分析</button>
+          </div>
+        </form>
+      </aside>
+
+      <div class="content-column">
+        <section class="panel execution-panel" aria-labelledby="execution-title">
+          <div class="panel-heading"><div><p class="section-kicker">分析流程</p><h2 id="execution-title">分析進度</h2></div><span id="run-mode" class="mode-badge">尚未執行</span></div>
+          <p id="status" class="status-message" role="status" aria-live="polite">載入範例或填寫資料後開始分析。</p>
+          <ol id="run-steps" class="run-steps" aria-label="分析階段">
+            <li data-step="input"><span>1</span><div><strong>確認原始資料</strong><small>檢查八項輸入與矛盾</small></div></li>
+            <li data-step="manager"><span>2</span><div><strong>開店規劃代理</strong><small>建立計畫並完成計算</small></div></li>
+            <li data-step="reviewer"><span>3</span><div><strong>準備度複核代理</strong><small>依原始資料重新核對</small></div></li>
+            <li data-step="report"><span>4</span><div><strong>準備度報告</strong><small>等待你的確認</small></div></li>
+          </ol>
+          <button id="retry" class="button button-secondary" type="button" hidden>重試上次分析</button>
+        </section>
+
+        <section id="empty-state" class="panel empty-state" aria-labelledby="empty-title">
+          <div class="empty-graphic" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="section-kicker">等待開始</p>
+          <h2 id="empty-title">準備度儀表板正在等候資料</h2>
+          <p>完成左側開店資料後，這裡會顯示工作順序、關鍵工作、預算與日期風險、兩份分析的差異，以及等待你確認的事項。</p>
+        </section>
+
+        <div id="result" hidden>
+          <section id="dashboard" class="panel dashboard-panel" aria-labelledby="dashboard-title">
+            <div class="panel-heading"><div><p class="section-kicker">準備度總覽</p><h2 id="dashboard-title">開幕準備度</h2></div><span id="source" class="source-badge">資料來源：—</span></div>
+            <div class="metric-grid">
+              <article class="score-card"><div id="score-ring" class="score-ring"><span id="score">—</span><small>準備度</small></div><div><strong id="readiness-label">尚未評估</strong><progress id="score-progress" max="100" value="0">0%</progress><p>分數由文件、預算、工作完成度與時程風險決定。</p></div></article>
+              <article class="metric-card"><span class="metric-label">任務完成率</span><strong id="completion">—</strong><small id="completion-note">等待計算</small></article>
+              <article class="metric-card"><span class="metric-label">預算狀態</span><strong id="budget-state">—</strong><small id="budget-note">等待計算</small></article>
+              <article class="metric-card"><span class="metric-label">目前落後</span><strong id="delay-state">—</strong><small>工作天</small></article>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="risk-title">
+            <div class="panel-heading"><div><p class="section-kicker">風險控制</p><h2 id="risk-title">缺口與風險</h2></div><span id="risk-count" class="count-badge">0 項</span></div>
+            <div id="risk-grid" class="risk-grid"></div>
+          </section>
+
+          <section class="panel" aria-labelledby="schedule-title">
+            <div class="panel-heading"><div><p class="section-kicker">關鍵路徑</p><h2 id="schedule-title">工作順序與完成期限</h2></div><div class="legend"><span><i class="dot dot-critical"></i>關鍵工作</span><span><i class="dot dot-done"></i>已完成</span></div></div>
+            <div class="table-wrap"><table><thead><tr><th>工作</th><th>狀態</th><th>完成後才能開始</th><th>開始</th><th>最早完成</th><th>最晚完成日</th><th>可延後天數</th><th>需要天數</th></tr></thead><tbody id="schedule-body"></tbody></table></div>
+          </section>
+
+          <section id="rescue" class="panel rescue-panel" aria-labelledby="rescue-title">
+            <div class="panel-heading"><div><p class="section-kicker">開幕救援</p><h2 id="rescue-title">開幕延誤模擬</h2></div><span class="signature-badge">核心功能</span></div>
+            <p class="rescue-intro">如果某項工作延誤，開幕日會變成哪一天？輸入可縮短的天數與費用，日期和成本只依你提供的資料計算。</p>
+            <form id="rescue-form">
+              <fieldset>
+                <legend>建立一個不會改動原計畫的救援情境</legend>
+                <div class="rescue-fields">
+                  <label class="field"><span>受影響工作</span><select id="rescue-task" name="task_id" required disabled><option value="">請先建立計畫</option></select></label>
+                  <label class="field"><span>延誤天數（工作天）</span><input name="delay_workdays" type="number" min="1" max="60" step="1" value="4" required></label>
+                  <label class="field"><span>新增費用（新臺幣）</span><input name="direct_budget_shock" type="number" min="0" max="1000000000000" step="1" value="50000" required></label>
+                  <label class="field"><span>最多可追回天數（工作天）</span><input name="max_recoverable_workdays" type="number" min="0" max="60" step="1" value="4" required></label>
+                  <label class="field"><span>每天追回工期費用（新臺幣）</span><input name="recovery_cost_per_day" type="number" min="0" max="1000000000000" step="1" value="5000" placeholder="沒有資料可留白"></label>
+                </div>
+              </fieldset>
+              <div class="rescue-actions"><button id="simulate-rescue" class="button button-primary" type="submit" disabled>計算延誤影響</button><button id="live-rescue" class="button button-secondary" type="button" hidden disabled>雙代理重新核對</button></div>
+            </form>
+            <p id="rescue-status" class="rescue-status" role="status" aria-live="polite">先完成開店計畫，再加入一個延誤情境。</p>
+            <button id="rescue-retry" class="button button-secondary" type="button" hidden>重試上次模擬</button>
+
+            <div id="rescue-result" hidden>
+              <div class="rescue-comparison" aria-label="原計畫與延誤比較">
+                <article><span>原定開幕</span><strong id="rescue-baseline-date">—</strong><small>原計畫（不會更改）</small></article>
+                <article><span>不處理延誤</span><strong id="rescue-shock-date">—</strong><small id="rescue-delay-copy">—</small></article>
+                <article><span>受影響工作</span><strong id="rescue-affected-count">—</strong><small id="rescue-affected-copy">—</small></article>
+              </div>
+              <div class="rescue-heading"><div><h3>三種救援選擇</h3><p>確認後只會記錄你的選擇，不會自動更改日期、工作或支出。</p></div><span id="rescue-review-badge" class="agreement-badge">計算核對完成</span></div>
+              <div id="strategy-grid" class="strategy-grid" role="radiogroup" aria-label="救援方案"></div>
+              <div class="rescue-agent-note"><div><strong>開店規劃代理</strong><p id="rescue-manager">已依情境計算三種救援方案。</p></div><div><strong>準備度複核代理</strong><p id="rescue-reviewer">已依相同原始資料完成計算核對。</p></div></div>
+              <div class="rescue-choice"><button id="adopt-rescue" class="button button-approve" type="button" disabled>確認記錄此選擇</button><p id="rescue-choice-state">尚未選擇方案</p></div>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="agents-title">
+            <div class="panel-heading"><div><p id="agent-section-kicker" class="section-kicker">系統計算與複核</p><h2 id="agents-title">計算結果與核對</h2></div><span id="agreement-state" class="agreement-badge">等待核對</span></div>
+            <div class="agent-grid">
+              <article class="agent-card manager-card"><div class="agent-head"><span class="agent-avatar">規</span><div><strong>開店規劃代理</strong><small>計畫建立與風險彙整</small></div></div><p id="manager">尚未產生結論。</p><ul id="manager-facts" class="fact-list"></ul></article>
+              <article class="agent-card reviewer-card"><div class="agent-head"><span class="agent-avatar">核</span><div><strong>準備度複核代理</strong><small>只讀取資料，不更改計畫</small></div></div><p id="reviewer">尚未產生核對結果。</p><ul id="reviewer-facts" class="fact-list"></ul></article>
+            </div>
+            <div id="agent-difference" class="difference-note"></div>
+          </section>
+
+          <section id="approvals" class="panel approval-panel" aria-labelledby="approval-title">
+            <div class="approval-copy"><p class="section-kicker">你的決定</p><h2 id="approval-title">等待你的確認</h2><p>請確認預算、文件與開幕日期風險。系統只能提出建議，最後決定由你確認。</p><ul><li>是否接受目前預算風險</li><li>是否維持預定開幕日</li><li>是否先補齊必要文件</li></ul></div>
+            <div class="approval-actions"><button id="approve" class="button button-approve" type="button" disabled>核准計畫</button><button id="reject" class="button button-reject" type="button" disabled>拒絕計畫</button><button id="defer" class="button button-secondary" type="button" disabled>延後決定</button><p id="decision-state">等待你的決定</p></div>
+          </section>
+
+          <section class="panel report-panel" aria-labelledby="report-title">
+            <div class="panel-heading"><div><p class="section-kicker">報告與紀錄</p><h2 id="report-title">準備度報告</h2></div><div class="report-actions"><button id="print-report" class="button button-ghost" type="button">列印／另存報告</button><a id="report-link" class="button button-secondary" hidden download="readiness-report.json">下載報告資料檔</a></div></div>
+            <article id="report-preview" class="report-preview"><div class="report-brand">開店就緒助手</div><h3 id="report-project">尚未建立計畫</h3><p id="report-meta">—</p><div class="report-summary"><div><span>準備度</span><strong id="report-score">—</strong></div><div><span>關鍵工作</span><strong id="report-critical">—</strong></div><div><span>風險項目</span><strong id="report-risks">—</strong></div></div><p id="report-conclusion">完成分析後產生摘要。</p></article>
+            <div class="audit-heading"><h3>操作紀錄</h3><span>只記錄重要操作，不保存密碼或金鑰</span></div><ol id="audit-log" class="audit-log"><li>尚無操作紀錄。</li></ol>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="decision-dialog" aria-labelledby="confirm-title">
+    <form method="dialog" class="dialog-card"><span class="dialog-icon" aria-hidden="true">!</span><h2 id="confirm-title">確認你的決定</h2><p id="confirm-copy"></p><div class="dialog-actions"><button id="cancel-decision" class="button button-ghost" value="cancel">返回檢查</button><button id="confirm-decision" class="button button-primary" value="default">確認送出</button></div></form>
+  </dialog>
+
+  <dialog id="rescue-dialog" aria-labelledby="rescue-confirm-title">
+    <form method="dialog" class="dialog-card"><span class="dialog-icon" aria-hidden="true">!</span><h2 id="rescue-confirm-title">確認救援方案</h2><p id="rescue-confirm-copy"></p><div class="dialog-actions"><button id="cancel-rescue" class="button button-ghost" value="cancel">返回比較</button><button id="confirm-rescue" class="button button-primary" value="default">確認記錄</button></div></form>
+  </dialog>
+
+  <footer><p>開店就緒助手・開店前規劃與風險決策</p><p>請以所在地主管機關與專業人員意見為準。</p></footer>
+</body>
+</html>

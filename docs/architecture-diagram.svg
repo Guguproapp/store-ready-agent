@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">StoreReady Agent architecture</title>
+  <desc id="desc">A browser sends a fictional store brief and opening shock to a secure HTTP API. The Launch Manager uses deterministic readiness and rescue tools and calls a read-only Readiness Reviewer. Human approval and rescue selection remain outside both agents. SQLite stores immutable simulations, hashes, decisions, and the audit trail.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="1" stop-color="#102d3a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#79d4c3"/>
+    </marker>
+    <style>
+      .title { font: 700 42px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f6fbff; }
+      .subtitle { font: 400 20px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #b8cbd5; }
+      .label { font: 700 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f6fbff; }
+      .copy { font: 400 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #c7d8df; }
+      .small { font: 600 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #79d4c3; letter-spacing: 1px; }
+      .box { fill: #123646; stroke: #2d6170; stroke-width: 2; rx: 20; filter: url(#shadow); }
+      .agent { fill: #153f4d; stroke: #79d4c3; stroke-width: 3; rx: 20; filter: url(#shadow); }
+      .human { fill: #49351d; stroke: #f2bd68; stroke-width: 3; rx: 20; filter: url(#shadow); }
+      .line { fill: none; stroke: #79d4c3; stroke-width: 4; marker-end: url(#arrow); }
+      .boundary { fill: none; stroke: #557b87; stroke-width: 2; stroke-dasharray: 10 10; rx: 28; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <text x="90" y="82" class="title">StoreReady Agent</text>
+  <text x="90" y="118" class="subtitle">Pre-opening readiness · Opening Rescue Simulator · independent AI review · human control</text>
+
+  <rect x="70" y="160" width="1460" height="650" class="boundary"/>
+  <text x="98" y="195" class="small">APPLICATION TRUST BOUNDARY</text>
+
+  <rect x="105" y="245" width="260" height="160" class="box"/>
+  <text x="135" y="288" class="small">01 · USER INPUT</text>
+  <text x="135" y="327" class="label">Responsive browser</text>
+  <text x="135" y="360" class="copy">fictional brief + shock facts</text>
+  <text x="135" y="386" class="copy">slack · 3 rescue policies</text>
+
+  <rect x="455" y="245" width="280" height="160" class="box"/>
+  <text x="485" y="288" class="small">02 · CONTROL PLANE</text>
+  <text x="485" y="327" class="label">Secure HTTP API</text>
+  <text x="485" y="360" class="copy">Session + CSRF + limits</text>
+  <text x="485" y="386" class="copy">Live mode defaults off</text>
+
+  <rect x="825" y="220" width="300" height="210" class="agent"/>
+  <text x="855" y="263" class="small">03 · STRANDS AGENT</text>
+  <text x="855" y="302" class="label">Launch Manager</text>
+  <text x="855" y="338" class="copy">Creates the launch plan</text>
+  <text x="855" y="366" class="copy">selects deterministic tools</text>
+  <text x="855" y="394" class="copy">explains rescue trade-offs</text>
+
+  <rect x="1210" y="220" width="275" height="210" class="agent"/>
+  <text x="1240" y="263" class="small">04 · READ-ONLY AGENT</text>
+  <text x="1240" y="302" class="label">Readiness Reviewer</text>
+  <text x="1240" y="338" class="copy">Reloads original snapshot</text>
+  <text x="1240" y="366" class="copy">recalculates scenario + hashes</text>
+  <text x="1240" y="394" class="copy">cannot mutate or approve</text>
+
+  <path d="M365 325 H445" class="line"/>
+  <path d="M735 325 H815" class="line"/>
+  <path d="M1125 325 H1200" class="line"/>
+
+  <rect x="455" y="525" width="380" height="190" class="box"/>
+  <text x="485" y="568" class="small">DETERMINISTIC PYTHON TOOLS</text>
+  <text x="485" y="607" class="label">Source of truth</text>
+  <text x="485" y="641" class="copy">critical path · latest safe date · slack</text>
+  <text x="485" y="669" class="copy">shock · budget · 3 rescue policies</text>
+  <text x="485" y="697" class="copy">testable results, not model arithmetic</text>
+
+  <rect x="930" y="525" width="240" height="190" class="box"/>
+  <text x="960" y="568" class="small">PERSISTENCE</text>
+  <text x="960" y="607" class="label">SQLite</text>
+  <text x="960" y="641" class="copy">project · tasks · risks</text>
+  <text x="960" y="669" class="copy">simulation · hashes · audit</text>
+  <text x="960" y="697" class="copy">2-hour DEMO retention</text>
+
+  <rect x="1260" y="525" width="225" height="190" class="human"/>
+  <text x="1290" y="568" class="small" style="fill:#f2bd68">HUMAN CHECKPOINT</text>
+  <text x="1290" y="607" class="label">Final decision</text>
+  <text x="1290" y="641" class="copy">choose rescue strategy</text>
+  <text x="1290" y="669" class="copy">one-shot confirmation</text>
+  <text x="1290" y="697" class="copy">never an Agent tool</text>
+
+  <path d="M920 430 V475 H720 V515" class="line"/>
+  <path d="M1345 430 V475 H780 V515" class="line"/>
+  <path d="M835 620 H920" class="line"/>
+  <path d="M1170 620 H1250" class="line"/>
+  <path d="M1260 685 H1190 V755 H235 V415" class="line"/>
+
+  <rect x="105" y="525" width="260" height="190" class="box"/>
+  <text x="135" y="568" class="small">OUTPUT</text>
+  <text x="135" y="607" class="label">Readiness report</text>
+  <text x="135" y="641" class="copy">manager vs reviewer</text>
+  <text x="135" y="669" class="copy">critical path · rescue options</text>
+  <text x="135" y="697" class="copy">download · print · audit</text>
+
+  <text x="90" y="855" class="subtitle">Amazon Bedrock is invoked only in explicitly enabled Live mode. Public DEMO mode is deterministic and cost-guarded.</text>
+</svg>
