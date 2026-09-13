@@ -95,7 +95,7 @@ AWS_PROFILE=launchpilot AWS_REGION=ap-southeast-2 \
 .venv/bin/python -m compileall -q src scripts tests
 ```
 
-The verified bilingual candidate passes 74 automated tests. The responsive interface passed
+The verified bilingual candidate passes 75 automated tests. The responsive interface passed
 Browser QA at 1440×900, 768×1024, and 390×844 with no page-level horizontal overflow; the
 English entry also passed complete workflow QA and Safari loading checks. Mutation endpoints
 require a same-site Session and CSRF token;
