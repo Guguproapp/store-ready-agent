@@ -12,4 +12,3 @@ StoreReady Agent is released under Apache License 2.0. It uses the following dir
 | Mypy | 1.20.2 verified | MIT | https://github.com/python/mypy |
 
 The complete pinned development dependency inventory is in `requirements-dev.lock` and summarized in `docs/SBOM.md`. Amazon Web Services, Amazon Bedrock, Amazon Nova, and related marks are trademarks of Amazon.com, Inc. or its affiliates. Their names identify compatible services and do not imply endorsement.
-

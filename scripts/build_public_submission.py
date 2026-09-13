@@ -17,6 +17,7 @@ PUBLIC_ENTRIES = (
     "render.yaml",
     "src/store_ready",
     "tests",
+    "scripts/__init__.py",
     "scripts/build_public_submission.py",
     "scripts/preflight_live.py",
     "scripts/run_demo.py",

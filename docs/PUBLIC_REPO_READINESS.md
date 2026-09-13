@@ -1,6 +1,6 @@
 # Public Repository Readiness
 
-Status: `READY FOR OWNER REVIEW / NOT PUBLISHED`
+Status: `PRIVATE REPOSITORY READY / OWNER PUBLICATION REQUIRED`
 
 - [x] New project scope and prior-work disclosure documented.
 - [x] Apache License 2.0 file prepared from the official Apache text, as required by the owner acceptance criteria.
@@ -13,7 +13,7 @@ Status: `READY FOR OWNER REVIEW / NOT PUBLISHED`
 - [x] English-first README, judge testing guide and English video script prepared.
 - [x] Standalone SVG architecture diagram prepared and linked from README.
 - [x] Deterministic public-source export excludes internal governance evidence, Git metadata, secrets and local paths.
-- [ ] Run the final public-source export from the exact submission HEAD and verify its manifest immediately before publication.
+- [x] Final public-source export built from the release HEAD; 43-file manifest and ZIP verified.
 - [ ] Owner approval to create or publish a public GitHub repository.
 - [ ] Owner approval to upload a public video.
 - [ ] Owner approval to submit Devpost.

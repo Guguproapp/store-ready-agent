@@ -28,6 +28,8 @@ The final candidate also completed a separate real Bedrock run for the Opening R
 
 The public-source package includes the implementation and repeatable verification script but excludes internal machine-specific governance evidence. Authorized reviewers can reproduce the Live check using the standard AWS credential chain:
 
+The recorded preflight digest maps to the verified agent-core revision. Later release work changed presentation, bilingual UI, tests, documentation, and packaging only; the Manager/Reviewer implementation, deterministic domain and service logic, storage boundary, credential guard, and `scripts/preflight_live.py` remain byte-identical to that verified agent-core revision. The broader aggregate digest also includes UI and test files, so it is not presented as a current release-package digest. Package integrity is reported separately through `PUBLIC_MANIFEST.txt` and the release ZIP hash.
+
 ```bash
 AWS_PROFILE=your-authorized-profile AWS_REGION=ap-southeast-2 \
   .venv/bin/python scripts/preflight_live.py

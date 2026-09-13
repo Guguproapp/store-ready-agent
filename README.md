@@ -158,7 +158,7 @@ AWS_PROFILE=launchpilot AWS_REGION=ap-southeast-2 \
   .venv/bin/python scripts/preflight_live.py
 ```
 
-2026-09-12 已用 Strands Agents SDK 1.55.0 與 Amazon Nova Lite 真正執行兩個不同 Agent 及七項必要工具呼叫。秘密已排除，證據保存於 `reports/live-agent-evidence/preflight.json`。失敗、逾時或缺工具一律 fail-closed，不會改用離線結果冒充成功。
+2026-09-12 已用 Strands Agents SDK 1.55.0 與 Amazon Nova Lite 真正執行兩個不同 Agent 及七項必要工具呼叫。公開版的去識別化證據摘要見 [`docs/LIVE_EVIDENCE.md`](docs/LIVE_EVIDENCE.md)；內部原始證據不隨公開包發布。失敗、逾時或缺工具一律 fail-closed，不會改用離線結果冒充成功。
 
 ## 啟動 DEMO
 

@@ -12,6 +12,7 @@ docs/architecture-diagram.svg
 pyproject.toml
 render.yaml
 requirements-dev.lock
+scripts/__init__.py
 scripts/build_public_submission.py
 scripts/preflight_live.py
 scripts/run_demo.py
